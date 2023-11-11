@@ -1,0 +1,200 @@
+## Урок 4. Семинар. Основы CSS
+Данная домашняя работа является продолжение предыдущей, не забываем использовать работу из прошлого урока
+
+1. Открыть Домашнюю работу из урока 1.
+
+2. Создать файл стилей style.css
+
+3. Подключить ко всем страницам
+
+4. Задать стиль
+
+    ```css
+    a {
+        text-decoration: none;
+    }
+    ```
+
+5. Проверить работу стилей на всех страницах.
+
+6. Разделить экран на 2 части, сделать так чтобы файл стилей располагался справа, а все html-файлы были слева.
+
+7. Для всех ссылок меню задать класс (придумать логичное название класса)
+```css
+* color: cornflowerblue;
+* font-size: 16px;
+* line-height: 20px;
+```
+
+8. Проверить отображения стилей на всех страницах проекта.
+
+9. Для всех заголовков h1 на сайте задать класс и к нему стиль
+```css
+* color: #222222;
+* font-size: 28px;
+* line-height: 36px;
+* font-weight: bold;
+```
+
+10. Для всех параграфов в проекте задать класс.
+
+11. К данному классу задать стили:
+```css
+* font-style: normal;
+* font-weight: 300;
+* font-size: 18px;
+* line-height: 30px;
+* color: #7D7987;
+```
+
+12. Для заголовков h2 задать класс.
+
+13. К данному классу указать стиль:
+```css
+* color: coral;
+* font-style: normal;
+* font-weight: 700;
+* font-size: 36px;
+* line-height: 80px;
+```
+
+[link for home work folder](./lesson_1/home_work/)
+  2 changes: 1 addition & 1 deletion2  
+lesson_1/home_work/catalog/catalog.html
+@@ -5,7 +5,7 @@
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="../topnavbar.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="topnavbar">
+  2 changes: 1 addition & 1 deletion2  
+lesson_1/home_work/contact.html
+@@ -5,7 +5,7 @@
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="topnavbar.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnavbar">
+  2 changes: 1 addition & 1 deletion2  
+lesson_1/home_work/index.html
+@@ -5,7 +5,7 @@
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tittle page</title>
+    <link rel="stylesheet" href="topnavbar.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topnavbar">
+ 103 changes: 103 additions & 0 deletions103  
+lesson_1/home_work/style.css
+@@ -0,0 +1,103 @@
+.topnavbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.topnavbar a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.topnavbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+}
+
+.product-card-link {
+  text-decoration: none;
+}
+
+.product-card-title {
+  font-weight: 700;
+  color: #242424;
+}
+
+.product-card-about {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #1b150e;
+  text-transform: initial;
+}
+
+.wrp {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.map-box {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  z-index: 100;
+  width: 250px;
+  box-shadow: -1px -1px 24px 0px rgba(50, 50, 50, 0.5);
+}
+
+.map-box p {
+  font-size: 18px;
+}
+
+#map {
+  width: 100%;
+  height: 350px;
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: #222222;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  color: coral;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 80px;
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7d7987;
+}
